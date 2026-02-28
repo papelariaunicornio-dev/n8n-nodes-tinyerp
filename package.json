@@ -1,0 +1,47 @@
+{
+  "name": "n8n-nodes-tinyerp-bmannato",
+  "version": "0.1.0",
+  "description": "n8n node for Tiny ERP API V2",
+  "keywords": [
+    "n8ncommunity",
+    "n8n-nodes-tinyerp"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "author": {
+    "name": "User",
+    "email": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "prepack": "npm run build"
+  },
+  "files": [
+    "dist"
+  ],
+  "n8n": {
+    "nodes": [
+      "dist/nodes/TinyErp/TinyErp.node.js"
+    ],
+    "credentials": [
+      "dist/credentials/TinyErpApi.credentials.js"
+    ]
+  },
+  "devDependencies": {
+    "@types/node": "^25.3.2",
+    "eslint": "^10.0.2",
+    "n8n-core": "^1.122.16",
+    "rimraf": "^6.1.3",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "n8n-workflow": "^1.120.9"
+  }
+}
